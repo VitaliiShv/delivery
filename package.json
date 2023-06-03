@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
     "formik": "^2.4.1",
+    "gh-pages": "^5.0.0",
     "nanoid": "^4.0.2",
     "notiflix": "^3.2.6",
     "react": "^18.2.0",
@@ -20,6 +21,8 @@
     "yup": "^1.2.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
