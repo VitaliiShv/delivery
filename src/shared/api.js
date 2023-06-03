@@ -33,3 +33,8 @@ export const removeProductFromCart = async (productId) => {
   const { data } = await instance.delete(`/cart/${productId}`);
   return data;
 };
+
+export const addOrderToList = async (data) => {
+  const result = await instance.post("/order/", data);
+  return result;
+};

@@ -2,7 +2,11 @@ import styles from "./OrderPage.module.css";
 import CartList from "../../modules/cartList/CartList";
 import OrderForm from "../../modules/orderForm/OrderForm";
 import { useEffect, useState } from "react";
-import { getCart, removeProductFromCart } from "../../shared/api";
+import {
+  getCart,
+  removeProductFromCart,
+  addOrderToList,
+} from "../../shared/api";
 import Notiflix from "notiflix";
 
 const OrderPage = () => {
@@ -20,13 +24,18 @@ const OrderPage = () => {
     setTotal(total);
   }
 
-  const makeRequest = (formData, cart, total) => {
+  const makeRequest = async (formData, cart, total) => {
     if (cart.length <= 0) {
       Notiflix.Notify.failure("Your cart is empty");
       return;
     }
-    const reqObj = { ...formData, order: cart, totalPrice: total };
-    console.log(reqObj);
+    const reqObj = { ...formData, dishes: cart, totalPrice: total };
+    try {
+      await addOrderToList(reqObj);
+      Notiflix.Notify.success("Order added succesfully");
+    } catch (error) {
+      Notiflix.Notify.failure(error.message);
+    }
   };
 
   const handleSubmit = (data) => {
