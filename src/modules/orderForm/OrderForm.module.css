@@ -1,0 +1,46 @@
+.container {
+  padding: 25px 25px;
+  box-shadow: 3px 8px 14px rgba(136, 198, 253, 0.19);
+  border-radius: 40px;
+  background-color: #ffffff;
+  flex-grow: 1;
+  flex-basis: 50%;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-family: "Manrope";
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.36;
+
+  color: #111111;
+}
+
+.form {
+  width: 600px;
+}
+
+.inputWrapper {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.label {
+  width: 100%;
+  display: block;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.inputWrapper p {
+  position: absolute;
+  font-size: 12px;
+  line-height: 1.33;
+  color: red;
+}

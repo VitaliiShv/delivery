@@ -1,0 +1,59 @@
+.container {
+  padding: 25px 25px;
+  box-shadow: 3px 8px 14px rgba(136, 198, 253, 0.19);
+  border-radius: 40px;
+  background-color: #ffffff;
+  flex-grow: 1;
+  flex-basis: 50%;
+  max-height: 550px;
+  overflow: auto;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-family: "Manrope";
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.36;
+
+  color: #111111;
+}
+
+.card {
+  background-color: #fef9f9;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.img {
+  display: block;
+  width: 100%;
+}
+
+.imgThumb {
+  width: 150px;
+  margin-right: 20px;
+}
+
+.cardText {
+  margin-right: 20px;
+}
+
+.label {
+  display: block;
+}
+
+.quantityInput {
+  margin-left: auto;
+}
+
+.quantityInput input {
+  width: 100px;
+}
+
+.button {
+  margin-left: 5px;
+}
